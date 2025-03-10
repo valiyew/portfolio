@@ -63,7 +63,7 @@
 }
 
 .layout-menu ul li {
-  margin-top: 20px;
+  margin-top: 30px;
   list-style-type: none;
   display: flex;
   gap: 10px;
@@ -76,5 +76,5 @@
   color: #fff;
 }
 .layout-menu ul li:hover svg {
-  color: rgba(4, 11, 20, 255);
+  color: #fff;
 }

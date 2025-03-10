@@ -4,9 +4,9 @@ import { ConfigProvider } from "antd";
 import "antd/dist/reset.css";
 
 import { LayoutComponent } from "./components";
-import { PageComponent } from "./pages";
 
 import "./index.css";
+import { Routes } from "./router";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -15,13 +15,9 @@ const root = ReactDOM.createRoot(
 root.render(
   <ConfigProvider>
     <BrowserRouter>
-      <div
-        style={{
-          display: "flex",
-        }}
-      >
+      <div style={{ display: "flex" }}>
         <LayoutComponent />
-        <PageComponent />
+        <Routes />
       </div>
     </BrowserRouter>
   </ConfigProvider>
