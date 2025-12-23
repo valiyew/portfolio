@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { motion, useAnimation, type Variants } from "framer-motion";
 import { BsTelegram } from "react-icons/bs";
 import { RiInstagramFill } from "react-icons/ri";

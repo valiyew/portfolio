@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import { motion, AnimatePresence, type Variants } from "framer-motion";
 import { projects, type Project } from "@/data/projects";
