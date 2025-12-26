@@ -111,7 +111,7 @@ export default function PortfolioPage() {
                 <div className="p-5 space-y-2">
                   <span className="text-[8px] uppercase tracking-wide text-(--pale-sand)">{project.category}</span>
                   <h3 className="text-[14px] font-bold text-(--pale-sand)">{project.title}</h3>
-                  <p className="text-(--pale-sand) text-[12px]">{project.description}</p>
+                  <p className="text-(--pale-sand) text-[12px]">{project.description?.length > 100 ? project.description?.slice(0, 100) + "..." : project.description}</p>
                 </div>
               </motion.div>
             ))
@@ -134,7 +134,7 @@ export default function PortfolioPage() {
             onClick={() => setActiveProject(null)}
           >
             <motion.div
-              className="bg-slate-800 max-w-4xl w-full rounded-xl overflow-hidden relative"
+              className="bg-(--gray-color) max-w-4xl w-full rounded-xl overflow-hidden relative"
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
@@ -143,14 +143,14 @@ export default function PortfolioPage() {
             >
               <button
                 onClick={() => setActiveProject(null)}
-                className="absolute top-4 right-4 z-10 bg-slate-900 text-white p-2 rounded-full 
-                  shadow-lg hover:bg-slate-700 transition-colors"
+                className="absolute top-4 right-4 z-10 bg-(--gray-color) text-white p-2 rounded-full 
+                  shadow-lg transition-colors"
               >
                 <X size={22} />
               </button>
 
               {/* Image Slider */}
-              <div className="relative h-96 bg-slate-900">
+              <div className="relative h-96 bg-(--gray-color)">
                 <AnimatePresence mode="wait">
                   <motion.img
                     key={imageIndex}
@@ -168,16 +168,16 @@ export default function PortfolioPage() {
                   <>
                     <button
                       onClick={prevImage}
-                      className="absolute left-4 top-1/2 -translate-y-1/2 bg-slate-900/80 text-white 
-                        p-2 rounded-full shadow-lg hover:bg-slate-800 transition-colors"
+                      className="absolute left-4 top-1/2 -translate-y-1/2 bg-(--gray-color) text-white 
+                        p-2 rounded-full shadow-lg transition-colors"
                     >
                       <ChevronLeft size={24} />
                     </button>
 
                     <button
                       onClick={nextImage}
-                      className="absolute right-4 top-1/2 -translate-y-1/2 bg-slate-900/80 text-white 
-                        p-2 rounded-full shadow-lg hover:bg-slate-800 transition-colors"
+                      className="absolute right-4 top-1/2 -translate-y-1/2 bg-(--gray-color) text-white 
+                        p-2 rounded-full shadow-lg transition-colors"
                     >
                       <ChevronRight size={24} />
                     </button>
@@ -190,6 +190,10 @@ export default function PortfolioPage() {
                 <span className="uppercase tracking-wide text-blue-400 text-xs font-semibold">{activeProject.category}</span>
                 <h2 className="text-xl font-bold text-white">{activeProject.title}</h2>
                 <p className="text-slate-400 text-sm leading-relaxed">{activeProject.description}</p>
+                <a className="w-[300px] group text-(--gray-color) py-2 px-5 bg-(--pale-sand) rounded-2xl font-medium flex gap-2 items-center justify-center" href={activeProject.link} target="_blank">
+                  {t("show_project")}
+                  <ChevronRight size={22} className="transition-transform duration-300 group-hover:translate-x-1" />
+                </a>
               </div>
             </motion.div>
           </motion.div>

@@ -39,6 +39,7 @@
   "company_name_required": "Название компании обязательно",
   "phone_required": "Номер телефона обязателен",
   "company_site_required": "Сайт компании обязателен",
+  "show_project": "Показать проект",
 
   "company_site": "Сайт компании (ссылка)",
   "your_company_site": "Введите сайт вашей компании (ссылка)",
