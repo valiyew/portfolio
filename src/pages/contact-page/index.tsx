@@ -115,10 +115,14 @@ const ContactPage: React.FC = () => {
                   <a href="https://t.me/valiyew" target="_blank" className="text-(--pale-sand)">
                     <BsTelegram />
                   </a>
-                  <a href="https://instagram.com/" target="_blank" className="text-(--pale-sand)">
+                  <a href="https://www.instagram.com/valiyew_/" target="_blank" className="text-(--pale-sand)">
                     <RiInstagramFill />
                   </a>
-                  <a href="https://linkedin.com/" target="_blank" className="text-(--pale-sand)">
+                  <a
+                    href="https://www.linkedin.com/authwall?trk=bf&trkInfo=AQHeFj3fpDQMfQAAAZte1eIQf9v8Y_BpM28entg4Kk-E-Zt6MH_vOAovH8kxyyB_12BQ24Fvy9xnxGfwp1FoUHKtjcGWF-wLHs7xA_7XyD7YvLLonkl-FXgFRlulAhTJCTJ7Epg=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fdavronali-valiyev-107867282%3Futm_source%3Dshare%26utm_campaign%3Dshare_via%26utm_content%3Dprofile%26utm_medium%3Dios_app"
+                    target="_blank"
+                    className="text-(--pale-sand)"
+                  >
                     <FaLinkedin />
                   </a>
                   <a href="https://github.com/valiyew" target="_blank" className="text-(--pale-sand)">

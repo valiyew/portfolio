@@ -3,7 +3,6 @@ import { sidebarTools } from "./tools";
 import { BsTelegram } from "react-icons/bs";
 import { RiInstagramFill } from "react-icons/ri";
 import { FaLinkedin } from "react-icons/fa6";
-import { FaFacebook } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa6";
 import { useTranslation } from "react-i18next";
 
@@ -26,7 +25,7 @@ const Sidebar: React.FC<SidebarProps> = ({ closeSidebar }) => {
 
         <div className="flex items-center justify-between gap-2">
           <a
-            href="https://t.me/your_telegram"
+            href="https://t.me/valiyew"
             target="_blank"
             rel="noopener noreferrer"
             className="p-2 bg-(--bg-icon) flex items-center justify-center w-[50px] h-[50px] cursor-pointer duration-300 hover:opacity-[0.8] rounded-full"
@@ -35,7 +34,7 @@ const Sidebar: React.FC<SidebarProps> = ({ closeSidebar }) => {
           </a>
 
           <a
-            href="https://instagram.com/your_instagram"
+            href="https://www.instagram.com/valiyew_/"
             target="_blank"
             rel="noopener noreferrer"
             className="p-2 bg-(--bg-icon) flex items-center justify-center w-[50px] h-[50px] cursor-pointer duration-300 hover:opacity-[0.8] rounded-full"
@@ -44,7 +43,7 @@ const Sidebar: React.FC<SidebarProps> = ({ closeSidebar }) => {
           </a>
 
           <a
-            href="https://linkedin.com/in/your_linkedin"
+            href="https://www.linkedin.com/authwall?trk=bf&trkInfo=AQHeFj3fpDQMfQAAAZte1eIQf9v8Y_BpM28entg4Kk-E-Zt6MH_vOAovH8kxyyB_12BQ24Fvy9xnxGfwp1FoUHKtjcGWF-wLHs7xA_7XyD7YvLLonkl-FXgFRlulAhTJCTJ7Epg=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fdavronali-valiyev-107867282%3Futm_source%3Dshare%26utm_campaign%3Dshare_via%26utm_content%3Dprofile%26utm_medium%3Dios_app"
             target="_blank"
             rel="noopener noreferrer"
             className="p-2 bg-(--bg-icon) flex items-center justify-center w-[50px] h-[50px] cursor-pointer duration-300 hover:opacity-[0.8] rounded-full"
@@ -53,16 +52,7 @@ const Sidebar: React.FC<SidebarProps> = ({ closeSidebar }) => {
           </a>
 
           <a
-            href="https://facebook.com/your_facebook"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="p-2 bg-(--bg-icon) flex items-center justify-center w-[50px] h-[50px] cursor-pointer duration-300 hover:opacity-[0.8] rounded-full"
-          >
-            <FaFacebook className="text-[22px]" />
-          </a>
-
-          <a
-            href="https://facebook.com/your_facebook"
+            href="https://github.com/valiyew"
             target="_blank"
             rel="noopener noreferrer"
             className="p-2 bg-(--bg-icon) flex items-center justify-center w-[50px] h-[50px] cursor-pointer duration-300 hover:opacity-[0.8] rounded-full"
