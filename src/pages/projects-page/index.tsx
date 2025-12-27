@@ -32,7 +32,7 @@ export default function PortfolioPage() {
   const [imageIndex, setImageIndex] = useState(0);
   const { t } = useTranslation();
 
-  type ProjectCategory = "corporate" | "crm";
+  type ProjectCategory = "corporate" | "crm" | "support_maintenance";
 
   type Category = "all" | ProjectCategory;
 
@@ -40,6 +40,7 @@ export default function PortfolioPage() {
     { key: "all", label: t("all") },
     { key: "corporate", label: t("corporotive") },
     { key: "crm", label: t("crm_erp") },
+    { key: "support_maintenance", label: t("support_maintenance") },
   ];
 
   // Filter logic
@@ -109,7 +110,7 @@ export default function PortfolioPage() {
                 <img src={project.images[0]} alt={project.title} className="h-56 w-full object-cover" />
 
                 <div className="p-5 space-y-2">
-                  <span className="text-[8px] uppercase tracking-wide text-(--pale-sand)">{project.category}</span>
+                  <span className="text-[8px] tracking-wide text-(--pale-sand)">{t(project.category)}</span>
                   <h3 className="text-[14px] font-bold text-(--pale-sand)">{project.title}</h3>
                   <p className="text-(--pale-sand) text-[12px]">{project.description?.length > 100 ? project.description?.slice(0, 100) + "..." : project.description}</p>
                 </div>
@@ -117,7 +118,7 @@ export default function PortfolioPage() {
             ))
           ) : (
             <motion.div variants={itemVariants} className="col-span-full text-center py-12">
-              <p className="text-(--gray-color)">No projects found in this category</p>
+              <p className="text-(--gray-color)">{t("not_found_project")}</p>
             </motion.div>
           )}
         </motion.section>
@@ -187,10 +188,14 @@ export default function PortfolioPage() {
 
               {/* Project Info */}
               <div className="p-6 space-y-3">
-                <span className="uppercase tracking-wide text-blue-400 text-xs font-semibold">{activeProject.category}</span>
+                <span className="tracking-wide text-blue-400 text-xs font-semibold">{t(activeProject.category)}</span>
                 <h2 className="text-xl font-bold text-white">{activeProject.title}</h2>
                 <p className="text-slate-400 text-sm leading-relaxed">{activeProject.description}</p>
-                <a className="w-[300px] group text-(--gray-color) py-2 px-5 bg-(--pale-sand) rounded-2xl font-medium flex gap-2 items-center justify-center" href={activeProject.link} target="_blank">
+                <a
+                  className="w-[300px] group text-(--gray-color) py-2 px-5 bg-(--pale-sand) rounded-2xl font-medium flex gap-2 items-center justify-center"
+                  href={activeProject.link}
+                  target="_blank"
+                >
                   {t("show_project")}
                   <ChevronRight size={22} className="transition-transform duration-300 group-hover:translate-x-1" />
                 </a>

@@ -2,6 +2,7 @@ import { IoCodeSlash, IoColorPalette, IoPhonePortrait } from "react-icons/io5";
 import { motion } from "framer-motion";
 import type { Variants } from "framer-motion";
 import { useTranslation } from "react-i18next";
+import { MdAdminPanelSettings } from "react-icons/md";
 
 const containerVariants: Variants = {
   hidden: {},
@@ -52,39 +53,9 @@ const ServicePage = () => {
     },
     {
       id: 4,
-      icon: <IoCodeSlash className="text-[40px] text-(--text-blue)" />,
-      title: "Web Development",
-      description: "Modern, fast and responsive websites built with React, Vue and modern frontend tools.",
-    },
-    {
-      id: 5,
-      icon: <IoColorPalette className="text-[40px] text-(--text-blue)" />,
-      title: "UI/UX Design",
-      description: "Beautiful, user-friendly interfaces designed with attention to detail.",
-    },
-    {
-      id: 6,
-      icon: <IoPhonePortrait className="text-[40px] text-(--text-blue)" />,
-      title: "Mobile Responsive",
-      description: "Adaptable designs that look perfect on phones, tablets and desktops.",
-    },
-    {
-      id: 7,
-      icon: <IoPhonePortrait className="text-[40px] text-(--text-blue)" />,
-      title: "Mobile Responsive",
-      description: "Adaptable designs that look perfect on phones, tablets and desktops.",
-    },
-    {
-      id: 8,
-      icon: <IoCodeSlash className="text-[40px] text-(--text-blue)" />,
-      title: "Web Development",
-      description: "Modern, fast and responsive websites built with React, Vue and modern frontend tools.",
-    },
-    {
-      id: 9,
-      icon: <IoColorPalette className="text-[40px] text-(--text-blue)" />,
-      title: "UI/UX Design",
-      description: "Beautiful, user-friendly interfaces designed with attention to detail.",
+      icon: <MdAdminPanelSettings className="text-[40px] text-(--text-blue)" />,
+      title: "CRM/ERP platforms",
+      description: "Service of creating convenient and high-quality Crm/Erp platforms for your business.",
     },
   ];
 
@@ -94,9 +65,7 @@ const ServicePage = () => {
       <motion.section variants={itemVariants}>
         <h1 className="text-(--bg-primary) text-[24px] font-bold">{t("service")}</h1>
 
-        <p className="text-(--gray-color) mt-[40px] text-[16px] leading-relaxed">
-          {t("serviceDesc")}
-        </p>
+        <p className="text-(--gray-color) mt-[40px] text-[16px] leading-relaxed">{t("serviceDesc")}</p>
       </motion.section>
 
       {/* SERVICES GRID */}

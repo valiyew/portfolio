@@ -11,9 +11,9 @@ type ToastProps = {
 };
 
 const typeColors: Record<NonNullable<ToastProps["type"]>, string> = {
-  success: "bg-[#F0FDF4] text-[#16A34A] border border-[#16A34f]",
+  success: "bg-(--gray-color) text-(--pale-sand) border border-(--pale-sand)",
   info: "bg-[#FFFBEB] text-[#F59E0B] border border-[#F59E0f]",
-  error: "bg-[#F7EDED] text-[#D85637] border border-[#D8563f]",
+  error: "bg-(--gray-color) text-(--pale-sand) border border-(--pale-sand)",
 };
 
 const typeIcons = {

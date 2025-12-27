@@ -9,6 +9,7 @@ import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { motion } from "framer-motion";
 import type { Variants } from "framer-motion";
 import { useTranslation } from "react-i18next";
+import { useToast } from "@/utils/toast/ToastContext";
 
 type ContactFormValues = {
   phone: string;
@@ -36,6 +37,7 @@ const itemVariants: Variants = {
 
 const ContactPage: React.FC = () => {
   const { t } = useTranslation();
+  const { showToast } = useToast();
 
   const {
     handleSubmit,
@@ -44,9 +46,20 @@ const ContactPage: React.FC = () => {
     reset,
   } = useForm<ContactFormValues>();
 
-  const onSubmit = (data: ContactFormValues) => {
-    console.log("FORM DATA:", data);
-    reset();
+  const onSubmit = async (data: ContactFormValues) => {
+    try {
+      await fetch("/.netlify/functions/send-message", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      reset();
+      showToast({ type: "success", message: t("form_successfully_sent") });
+    } catch (err) {
+      console.log(err);
+      showToast({ type: "error", message: t("form_not_sent") });
+    }
   };
 
   return (

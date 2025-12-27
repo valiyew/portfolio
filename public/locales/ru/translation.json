@@ -25,6 +25,8 @@
   "services": "Услуги",
   "all": "Все",
   "corporotive": "Корпоративная",
+  "corporate": "Корпоративная",
+  "support_maintenance": "Поддержка и техническое обслуживание",
   "crm_erp": "CRM / ERP",
   "follow_me": "Подписаться",
   "full_name": "Полное имя",
@@ -40,6 +42,9 @@
   "phone_required": "Номер телефона обязателен",
   "company_site_required": "Сайт компании обязателен",
   "show_project": "Показать проект",
+  "not_found_project": "Проекты в этой категории не найдены",
+  "form_successfully_sent": "Форма успешно отправлена",
+  "form_not_sent": "Форма не отправлена, пожалуйста, попробуйте еще раз",
 
   "company_site": "Сайт компании (ссылка)",
   "your_company_site": "Введите сайт вашей компании (ссылка)",

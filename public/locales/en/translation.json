@@ -25,6 +25,8 @@
   "services": "Services",
   "all": "All",
   "corporotive": "Corporotive",
+  "corporate": "Corporotive",
+  "support_maintenance": "Support & Maintenance",
   "crm_erp": "CRM / ERP",
   "follow_me": "Follow me",
   "full_name": "Fullname",
@@ -43,6 +45,9 @@
   "your_company_site": "Enter your company site (link)",
   "enter_valid_phone_number": "Enter valid phone number",
   "show_project": "Show project",
+  "not_found_project": "No projects found in this category",
+  "form_successfully_sent": "Form successfully sent",
+  "form_not_sent": "Form not sent pls try again",
 
   "homeTitleAboutDev": "Software Frontend developer",
   "brieflyMe": "Frontend dasturchiman",
