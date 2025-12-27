@@ -48,6 +48,7 @@
   "not_found_project": "No projects found in this category",
   "form_successfully_sent": "Form successfully sent",
   "form_not_sent": "Form not sent pls try again",
+  "sending": "Sending...",
 
   "homeTitleAboutDev": "Software Frontend developer",
   "brieflyMe": "Frontend dasturchiman",

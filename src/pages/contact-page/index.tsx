@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useForm, Controller } from "react-hook-form";
 import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
@@ -38,6 +38,7 @@ const itemVariants: Variants = {
 const ContactPage: React.FC = () => {
   const { t } = useTranslation();
   const { showToast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const {
     handleSubmit,
@@ -48,6 +49,7 @@ const ContactPage: React.FC = () => {
 
   const onSubmit = async (data: ContactFormValues) => {
     try {
+      setIsSubmitting(true);
       await fetch("/.netlify/functions/send-message", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -59,6 +61,8 @@ const ContactPage: React.FC = () => {
     } catch (err) {
       console.log(err);
       showToast({ type: "error", message: t("form_not_sent") });
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -168,9 +172,12 @@ const ContactPage: React.FC = () => {
               <motion.button
                 variants={itemVariants}
                 type="submit"
-                className="w-full py-3 bg-(--pale-sand) text-(--gray-color) rounded-lg font-semibold transition-all duration-300 hover:opacity-90"
+                disabled={isSubmitting}
+                className={`w-full py-3 bg-(--pale-sand) text-(--gray-color) rounded-lg font-semibold transition-all duration-300 hover:opacity-90 ${
+                  isSubmitting ? "opacity-50 cursor-not-allowed" : ""
+                }`}
               >
-                {t("send_message")}
+                {isSubmitting ? t("sending") : t("send_message")}
               </motion.button>
             </motion.form>
           </motion.div>
