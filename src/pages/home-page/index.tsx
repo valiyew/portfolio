@@ -46,7 +46,7 @@ const HomePage = () => {
   const firstNameReversed = firstName.split("");
 
   return (
-    <div className="w-full h-screen bg-cover bg-center bg-no-repeat relative" style={{ backgroundImage: "url('/jennie.jpg')" }}>
+    <div className="w-full h-screen bg-cover bg-center bg-no-repeat relative" style={{ backgroundImage: "url('/portfolio-img-3.jpg')" }}>
       <div className="absolute inset-0 bg-black/50" />
 
       <div className="relative z-10 h-full flex flex-col items-center justify-center text-center text-white px-4">

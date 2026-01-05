@@ -16,7 +16,7 @@ const Sidebar: React.FC<SidebarProps> = ({ closeSidebar }) => {
     <div className="h-full flex flex-col p-4 bg-(--gray-color) text-(--pale-sand)">
       <div className="flex items-center justify-center flex-col gap-3">
         <div className="w-[140px] h-[140px] rounded-full p-2 bg-(--bg-icon)">
-          <img className="w-full h-full object-cover rounded-full" src="/jennie.jpg" alt="" />
+          <img className="w-full h-full object-cover rounded-full" src="/logo-img.jpg" alt="" />
         </div>
         <div className="flex items-center gap-2">
           <h1 className="text-[20px] font-medium text-(--text-white)">Davron Valiev</h1>

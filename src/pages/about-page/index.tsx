@@ -56,7 +56,7 @@ const AboutPage = () => {
       {/* IMAGE + INFO */}
       <motion.section variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid grid-cols-1 md:grid-cols-2 gap-10">
         <motion.div variants={itemVariants}>
-          <img className="w-full h-full object-cover rounded-[12px] border-6 border-(--gray-color)" src="/jennie.jpg" alt="profile" />
+          <img className="w-full h-full object-cover rounded-[12px] border-6 border-(--gray-color)" src="/logo-img.jpg" alt="profile" />
         </motion.div>
 
         <motion.div variants={containerVariants} className="flex flex-col gap-5">
